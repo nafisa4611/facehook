@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { actions } from "../actions";
-import { useProfile } from "../Hooks/useProfile";
-import useAxios from "../Hooks/useAxios";
-import { useAuth } from "../Hooks/useAuth";
 import ProfileInfo from "../Components/Profile/ProfileInfo";
 import MyPosts from "../Components/Profile/MyPosts";
+import { useProfile } from "../hooks/useProfile";
+import useAxios from "../hooks/useAxios";
+import { useAuth } from "../hooks/useAuth";
 
 const ProfilePage = () => {
     const { state, dispatch } = useProfile();

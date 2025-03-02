@@ -3,43 +3,46 @@ import { Link } from 'react-router-dom';
 import LoginForm from '../Components/auth/LoginForm';
 
 export default function Login() {
-
     return (
-        <main className="h-screen flex items-center justify-center bg-deepDark py-8">
-            <div className="max-w-[1368px] w-full flex items-center justify-center">
-                <div className="container grid items-center gap-8 lg:grid-cols-2">
-                    <div>
+        <main className="min-h-screen flex items-center justify-center bg-deepDark px-6 h-5">
+            <div className="w-full max-w-2xl flex flex-col lg:flex-row items-center gap-8 bg-gray-900 p-8 rounded-2xl shadow-lg">
+                {/* Left Side - Illustration & Text */}
+                <div className='flex flex-col items-center'>
+                    <section className="flex flex-col items-center text-center lg:w-1/2">
                         <img
-                            className="mb-12 max-w-full max-lg:hidden"
                             src={AuthIllustration}
-                            alt="auth_illustration"
+                            alt="Illustration of social media authentication"
+                            className="w-40 lg:w-48 aspect-square object-cover"
+                            loading="lazy"
                         />
-                        <div>
-                            <h1 className="mb-3 text-4xl font-bold lg:text-[40px]">Facehook</h1>
-                            <p className="max-w-[452px] text-gray-600/95 lg:text-lg">
-                                Create a social media app with features like showing posts,
-                                post details, reactions, comments, and profiles.
-                            </p>
-                        </div>
-                    </div>
+                        <h1 className="text-3xl font-bold text-white mt-4">Facehook</h1>
+                        <p className="text-gray-400 text-sm max-w-xs mt-2">
+                            A social media app where you can share posts, react, and engage.
+                        </p>
+                    </section>
 
-                    <div className="card w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <LoginForm />
-                        <div className="py-4 lg:py-6">
-                            <p className="text-center text-xs text-gray-600/95 lg:text-sm">
+                </div>
+                <div>
+                    {/* Right Side - Login Form */}
+                    <section className="w-full lg:w-1/2">
+                        <div className="bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h2 className="text-2xl font-semibold text-white text-center mb-4">Login</h2>
+                            <LoginForm />
+                            <p className="text-gray-400 text-center text-sm mt-4">
                                 Don’t have an account?{' '}
                                 <Link
-                                    className="text-white transition-all hover:text-lwsGreen hover:underline"
-                                    to='/register'
+                                    to="/register"
+                                    className="text-lwsGreen hover:underline transition duration-200"
                                 >
                                     Create New
                                 </Link>
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </div>
+
+
             </div>
         </main>
     );
 }
-

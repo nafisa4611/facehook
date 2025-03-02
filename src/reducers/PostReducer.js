@@ -1,31 +1,29 @@
 import { actions } from "../actions";
 
 const initialState = {
-    user: null,
     posts: [],
     loading: false,
     error: null,
 };
 
-const profileReducer = (state, action) => {
+const postReducer = (state, action) => {
     switch (action.type) {
-        case actions.profile.DATA_FETCHING: {
+        case actions.post.DATA_FETCHING: {
             return {
                 ...state,
                 loading: true,
             };
         }
 
-        case actions.profile.DATA_FETCHED: {
+        case actions.post.DATA_FETCHED: {
             return {
                 ...state,
+                posts: action.data,
                 loading: false,
-                user: action.data.user,
-                posts: action.data.posts,
             };
         }
 
-        case actions.profile.DATA_FETCH_ERROR: {
+        case actions.post.DATA_FETCH_ERROR: {
             return {
                 ...state,
                 loading: false,
@@ -33,7 +31,7 @@ const profileReducer = (state, action) => {
             };
         }
 
-        case actions.profile.USER_DATA_EDITED: {
+        case actions.post.DATA_EDITED: {
             return {
                 ...state,
                 loading: false,
@@ -41,7 +39,18 @@ const profileReducer = (state, action) => {
             };
         }
 
-        case actions.profile.IMAGE_UPDATED: {
+        case actions.post.POST_COMMENTED: {
+            return {
+                ...state,
+                loading: false,
+                user: {
+                    ...state.user,
+                    avatar: action.data.avatar,
+                },
+            };
+        }
+
+        case actions.post.POST_LIKED: {
             return {
                 ...state,
                 loading: false,
@@ -58,4 +67,4 @@ const profileReducer = (state, action) => {
     }
 };
 
-export { initialState, profileReducer };
+export { initialState, postReducer };

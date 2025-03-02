@@ -219,8 +219,7 @@
         "ea168626-058e-49dd-b23c-3000e7bd0172",
         "8fc0f0d6-396a-4ef4-922b-27ef5b4e8526",
         "1aeef0f0-77ba-456b-8b5b-d4145a9b5410",
-        "a0e37f88-ffc7-4fc7-952e-81370ff96269",
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
+        "a0e37f88-ffc7-4fc7-952e-81370ff96269"
       ],
       "createAt": "2024-02-24T12:21:27.644Z"
     },
@@ -234,7 +233,18 @@
         "name": "Tapas Adhikary",
         "avatar": "uploads/avatar/avatar-1708770640883-148182382.png"
       },
-      "comments": [],
+      "comments": [
+        {
+          "id": "ddf99de5-025f-448b-906a-8173bd23be57",
+          "comment": "hello",
+          "createdAt": "2025-03-02T15:11:34.325Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1708849386635-121791126.png"
+          }
+        }
+      ],
       "likes": [],
       "createAt": "2024-02-24T12:29:59.028Z"
     },
@@ -460,6 +470,20 @@
       "comments": [],
       "likes": [],
       "createAt": "2024-02-25T07:16:53.349Z"
+    },
+    {
+      "id": "01ba0112-cf79-4df9-9f7e-62e26c172be1",
+      "content": "Hello",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1708849386635-121791126.png"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-03-02T16:02:10.309Z"
     }
   ],
   "comments": [],
@@ -514,6 +538,14 @@
       "avatar": "uploads/avatar/avatar-1708802845791-219561000.png",
       "email": "rambo@email.com",
       "bio": "I am Rambo!!!"
+    },
+    {
+      "id": "ef1357c0-d0e5-45aa-9e07-b472360adb44",
+      "password": "$2b$08$jzfB7Bie17zMXrrVWFd0uuzOLlV.wTojVxJWPp5fDhyBfswemQ9SG",
+      "firstName": "Adrita",
+      "lastName": "Ariba",
+      "avatar": null,
+      "email": "registrar@kau.edu.bd"
     }
   ]
 }

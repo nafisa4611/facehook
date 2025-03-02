@@ -3,9 +3,8 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProfilePage from './pages/ProfilePage';
-import RegistrationPage from './pages/RegistrationPage';
-
 import PrivateRoutes from './routes/PrivateRoutes';
+import RegistrationPage from './Page/RegistrationPage';
 
 function App() {
 
